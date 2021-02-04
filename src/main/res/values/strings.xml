@@ -1,3 +1,168 @@
 <resources>
 
+    <string name="szBatUnknown">unknown</string>
+    <string name="szBatOverheat">overheat</string>
+    <string name="szBatDead">dead</string>
+    <string name="szBatUnspec">unspecified failure</string>
+    <string name="szBatCold">cold</string>
+    <string name="szBatOvervoltage">over voltage</string>
+    <string name="szPlugAC" translatable="false">AC</string>
+    <string name="szPlugUSB" translatable="false">USB</string>
+    <string name="szPlugWireless" translatable="false">wireless</string>
+    <string name="szPlugUnknown">unknown</string>
+
+    <string name="szNoWritePermission" translatable="false">need storage permission</string>
+    <string name="szNoFileName" translatable="false">add a file name of at least 1 character</string>
+    <string name="szFileTransfer" translatable="false">File transfer</string>
+
+
+    <string name="szBatTemp">Battery temperature</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_title_allow_notifications">Battery temperature warning</string>
+    <string name="summary_notify_bat">Get a notification if the battery temperature exceeds a limit</string>
+    <string name="battery_notification_long_text">Currently</string>
+    <string name="szMaxRatingsLong">Long-term limits</string>
+
+    <string name="pref_title_min_temp_notification">Notify if temperature is below</string>
+    <string name="pref_title_max_temp_notification">Notify if temperature is above</string>
+
+    <string name="szLawHeader" translatable="false">Disclaimer</string>
+
+    <string name="feedback">Send feedback</string>
+    <string name="szStartupHintHist">The graphs are empty when the app is installed. Bamowi needs first to log some data which will be visible in a few minutes.</string>
+    <string name="szWelcome">Welcome</string>
+
+    <string name="szHealth" translatable="false">health</string>
+
+    <string name="fahrenheit_switch">Use Fahrenheit instead of Celsius</string>
+    <string name="pref_title_use_fahrenheit">Fahrenheit</string>
+
+    <string name="szHelpFaq">Help and information</string>
+    <string name="szHelpIntro">This section explains the app\'s behaviour and its various settings. For more information, enquiries or feature
+        requests, write an email to the address provided below or via the \"Send feedback\" button.</string>
+
+    <string name="szFaqTitle1">Purpose of the app</string>
+    <string name="szFaq1">Bamowi is observing your phone\'s battery health. Thus, a background task
+        is required to run in order to monitor the battery\'s behaviour.
+        It consumes very little of your battery, much less than 1\%.
+        \nThe main purpose of Bamowi is to warn you if your phone\'s battery temperature is too low
+        or too high. Furthermore, there is an accompanying widget which uses the same background process.
+        This widget gives you an immediate visibility over your battery\'s current state.
+        \nNote, it is not Bamowi\'s purpose to save or optimise your battery consumption. There are other apps for this.</string>
+
+    <string name="szFaqTitle2">Notification settings</string>
+    <string name="szFaq2">Since Android Oreo (Android 8), Google changed the behaviour of notifications and background tasks (Android services).
+    It is no longer possible to run an app in the background after it has been closed without giving the user a notification. This way, the user sees that the app is still running.
+    Bamowi needs to run in the background, however, notifications can be switched off.
+    </string>
+    <string name="szFaq22">Make sure that the \"Temperature limit warning\" notification is not disabled.
+        \nIf you have Android 7.1 or older, unfortunately it is not possible to disable single notifications, only all notifications. This means, if you disable the notifications,
+        the temperature limit warnings are disabled too.</string>
+
+    <string name="szFaqTitle3">Occasional erratic widget behaviour</string>
+    <string name="szFaq3">Some smartphone manufacturers modify the Android system to their needs and even violate Google\'s Android guidelines.
+        They implement their own battery saver apps which shut down most apps in the background to save battery.
+        \n\nSometimes, Bamowi is affected by this behaviour and gets closed.
+        In such cases, the workaround is for you to manually change the settings of your smartphone. Try to change the Bamowi app launch battery settings
+        from \"Auto-launch\" to \"Manually\".
+    </string>
+    <string name="szFaq33">This is not on all Android systems available. \n\nIn addition, some manufacturers allow to whitelist apps so that they could be excluded from battery optimisation.
+        \nFinally, make sure that the \"Temperature limit warning\" notification is not disabled.</string>
+
+    <string name="szFaqTitle4">Future development</string>
+    <string name="szFaq4">- Data export
+        \n- Extended logging history and better visualization
+    </string>
+    <string name="szContactIntro">Many users try to contact me through the app\'s rating system in Google Play Store. Unfortunately, the
+        developer\'s answer space is limited by Google. For better support, please write to:</string>
+
+
+    <string name="szHelpAndHints">Help and hints</string>
+    <string name="title_activity_app_info">Help and about Bamowi</string>
+
+    <string name="action_toggle_values">toggle values</string>
+    <string name="action_toggle_dots">toggle dots</string>
+    <string name="szHint">Hint</string>
+
+    <!-- new V2.0  -->
+    <string name="szLogging">Logging and graph</string>
+    <string name="pref_title_logging_duration">Logging duration</string>
+    <string name="szToggleLevel">toggle battery level</string>
+    <string name="szTemperature">Temperature</string>
+    <string name="szVoltage">Voltage</string>
+    <string name="szBatLevl">Battery level</string>
+    <string name="szServiceDescription">Bamowi battery monitoring and widget</string>
+    <string name="szOverview">Overview</string>
+    <string name="szResetZoom">reset zoom</string>
+    <string name="auto_restart">Automatic app restart</string>
+    <string name="sum_pref_run_service">Notifications, widget and logging battery data</string>
+    <string name="allow_background_ops">Allow background operations</string>
+
+    <string name="szBamowiRunnningBackground">Bamowi is running in the background</string>
+    <string name="szHideNotification">To hide, click and uncheck \"Show notifications\" or go to the app settings to stop the background operations</string>
+    <string name="log_deactivated">Logging is deactivated in the settings</string>
+
+    <string name="szDisclaimer1">If your smartphone runs out of memory, it is possible that the Android system stops the temperature logging and the values in the graph are not correct.
+        \nSome smartphones do not provide battery temperature and show always the same value (e.g. 25°C or 30°C).</string>
+
+
+    <!-- new V2.1 Bamowi basic -->
+    <string name="reset_level">Reset level</string>
+    <string name="reset_temperature">Reset temperature</string>
+    <string name="reset_volt">Reset voltage</string>
+    <string name="reset_msg">Reset long-term values to current values?</string>
+    <string name="started">Started:</string>
+    <string name="stopped">Stopped:</string>
+    <string name="summary_hide_volt">Don\'t log and don\'t show the battery voltage</string>
+    <string name="pref_title_hide_volt">Hide voltage</string>
+    <string name="szCharged">\nCharged</string>
+    <string name="szTo">to</string>
+    <string name="szFrom">from</string>
+    <string name="health_status">Health status:</string>
+    <string name="pref_old_screen_summary">Show the old, simple main screen</string>
+    <string name="pref_old_screen_title">Old screen layout</string>
+    <string name="msg_old_screen">The app will now restart to set this change.</string>
+    <string name="szStartupHintMainV3">Android gives you a warning that Bamowi is running in the background.
+        This app runs a background service to observe the battery temperature, what is necessary to notify you about too low or too high temperature.
+    </string>
+    <string name="szHistoryTemp">history temperature</string>
+    <string name="szHistoryVolt">history voltage</string>
+    <string name="szHistoryLevel">history battery level</string>
+
+
+    <!-- new V2.3 Bamowi basic -->
+    <string name="szNotificationChannelDescriptionTemp">Notifies if the battery reaches a certain temperature limit. Set the limit in the app\'s settings.</string>
+    <string name="szNotificationChannelDescriptionCurrentTemp">Shows the current battery temperature</string>
+
+    <string name="szBatTempWarning">Temperature warning</string>
+    <string name="szCurrentBatTemp">Battery temperature</string>
+
+    <string name="msg_optimize">You can set Bamowi to not be battery optimized by the Android system and keep running
+        to update you with battery temperature notifications.
+        \n\nSet in the following screen Bamowi to \"not optimized\".
+    </string>
+    <string name="background_optimization">Background operation optimization</string>
+    <string name="pref_optim_summary">Allow to not optimize Bamowi and keep it always running</string>
+    <string name="pref_optim_title">Change battery optimization for Bamowi</string>
+
+
+    <!-- new V0.5 BamowiPlus -->
+    <string name="avg">Average:</string>
+    <string name="szFull">Full</string>
+    <string name="title_activity_health">HealthActivity</string>
+    <string name="tab_text_1">Timeline</string>
+    <string name="tab_text_2">Statistics</string>
+    <string name="battery_health">Battery health</string>
+    <string name="reset_value">reset value</string>
+
+    <string name="Mon">Mon</string>
+    <string name="Tue">Tue</string>
+    <string name="Wed">Wed</string>
+    <string name="Thu">Thu</string>
+    <string name="Fri">Fri</string>
+    <string name="Sat">Sat</string>
+    <string name="Sun">Sun</string>
+
+    <string name="szCurrentBatTempInNotifBar">Temperature in notification bar</string>
 </resources>

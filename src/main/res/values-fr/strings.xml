@@ -1,0 +1,118 @@
+<resources>
+    <string name="szBatUnknown">inconnue</string>
+    <string name="szBatOverheat">surchauffer</string>
+    <string name="szBatDead">mort</string>
+    <string name="szBatUnspec">échec non spécifié</string>
+    <string name="szBatCold">du froid</string>
+    <string name="szBatOvervoltage">surtension</string>
+    <string name="szPlugUnknown">inconnue</string>
+
+    <string name="szBatTemp">Température de la batterie</string>
+
+    <string name="pref_title_allow_notifications">Température de batterie</string>
+    <string name="summary_notify_bat">Recevez une notification si la température de la batterie dépasse une limite</string>
+    <string name="battery_notification_long_text">Actuellement</string>
+    <string name="szMaxRatingsLong">Valeurs à long terme</string>
+
+    <string name="pref_title_min_temp_notification">Avertissez si la température est inférieure</string>
+    <string name="pref_title_max_temp_notification">Avertissez si la température est supérieure</string>
+
+    <string name="feedback">Envoyer des commentaires</string>
+    <string name="szWelcome">Bienvenue</string>
+
+    <string name="fahrenheit_switch">Utilisez Fahrenheit au lieu de Celsius</string>
+    <string name="pref_title_use_fahrenheit">Fahrenheit</string>
+
+    <string name="szHelpFaq">Aide et information</string>
+    <string name="szHelpIntro">Cette section explique le comportement de l\'application et ses différents paramètres. Pour plus d\'informations, demandes de renseignements ou fonctionnalité demandes, écrivez un e-mail à l\'adresse indiquée ci-dessous ou via le bouton \"Envoyer des commentaires\".</string>
+
+    <string name="szFaqTitle1">Objectif de l\'application</string>
+    <string name="szFaq1">Bamowi observe l\'état de la batterie de votre téléphone. Ainsi, une tâche d\'arrière-plan est nécessaire pour fonctionner afin de surveiller le comportement de la batterie. Il consomme très peu de votre batterie, bien moins de 1 \%. \nLe but principal de Bamowi est de vous avertir si la température de la batterie de votre téléphone est trop basse ou trop haut. En outre, il existe un widget d\'accompagnement qui utilise le même processus d\'arrière-plan. Ce widget vous donne une visibilité immédiate sur l\'état actuel de votre batterie.\nRemarque, le but de Bamowi n\'est pas d\'économiser ou d\'optimiser votre consommation de batterie. Il existe d\'autres applications pour cela.</string>
+
+    <string name="szFaqTitle2">Paramètres de notification</string>
+    <string name="szFaq2">Depuis Android Oreo (Android 8), Google a modifié le comportement des notifications et des tâches d\'arrière-plan (services Android).
+        Il n\'est plus possible d\'exécuter une application en arrière-plan après sa fermeture sans en avertir l\'utilisateur. De cette façon,
+        l\'utilisateur voit que l\'application est toujours en cours d\'exécution. Bamowi doit s\'exécuter en arrière-plan, mais les notifications peut être désactivée.
+    </string>
+    <string name="szFaq22">Assurez-vous que la notification \"Avertissement de limite de température\" n\'est pas désactivé.
+        \nSi vous avez Android 7.1 ou une version antérieure, il n\'est malheureusement pas possible de désactiver les notifications uniques, uniquement toutes les notifications.
+        Cela signifie que si vous désactivez les notifications, les avertissements de limite de température sont également désactivés.</string>
+
+    <string name="szFaqTitle3">Comportement de widget erratique occasionnel</string>
+    <string name="szFaq3">Certains fabricants de smartphones modifient le système Android selon leurs besoins et violent même les directives Android de Google. Ils implémentent leurs propres applications d\'économie de batterie qui arrêtent la plupart des applications en arrière-plan pour économiser la batterie.\n\nParfois, Bamowi est affecté par ce comportement et se ferme. Dans de tels cas, la solution de contournement consiste à modifier manuellement les paramètres de votre smartphone. Essayez de modifier les paramètres de la batterie de lancement de l\'application Bamowi de \"Lancement automatique\" à \"Manuellement\".</string>
+    <string name="szFaq33">Ce n\'est pas sur tous les systèmes Android disponibles. \n\nEn outre, certains fabricants autorisent la mise en liste blanche des applications afin qu\'elles puissent être exclues de l\'optimisation de la batterie.\nEnfin, assurez-vous que la notification \"Avertissement de limite de température\" n\'est pas désactivée.</string>
+
+    <string name="szFaqTitle4">Développement futur</string>
+    <string name="szFaq4">- Exportation de données\n- Historique de consignation étendu et meilleure visualisation</string>
+    <string name="szContactIntro">De nombreux utilisateurs essaient de me contacter via le système d\'évaluation de l\'application dans Google Play Store. Malheureusement, le l\'espace de réponse du développeur est limité par Google. Pour un meilleur support, veuillez écrire à:</string>
+
+
+    <string name="szHelpAndHints">Aide et conseils</string>
+    <string name="title_activity_app_info">Aide et à propos de Bamowi</string>
+
+    <string name="action_toggle_values">basculer les valeurs</string>
+    <string name="action_toggle_dots">basculer les points</string>
+    <string name="szHint">Allusion</string>
+
+    <!-- new V2.0  -->
+    <string name="szLogging">Journalisation et graphique</string>
+    <string name="pref_title_logging_duration">Durée d\'enregistrement</string>
+    <string name="szToggleLevel">basculer le niveau de la batterie</string>
+    <string name="szTemperature">Température</string>
+    <string name="szVoltage">Tension</string>
+    <string name="szBatLevl">Niveau de batterie</string>
+    <string name="szServiceDescription">Surveillance de la batterie et le widget</string>
+    <string name="szOverview">Aperçu</string>
+
+    <string name="szResetZoom">réinitialiser le zoom</string>
+    <string name="auto_restart">Redémarrage automatique de l\'application</string>
+    <string name="sum_pref_run_service">Notifications, widget et enregistrement des données de la batterie</string>
+    <string name="allow_background_ops">Autoriser opérations en arrière-plan</string>
+
+    <string name="szStartupHintHist">Les graphiques sont vides lorsque l\'application est installée. Bamowi doit d\'abord enregistrer certaines données qui seront visibles dans quelques minutes.</string>
+    <string name="szHideNotification">Pour masquer, cliquez et décochez \"Afficher les notifications\" ou accédez les paramètres de l\'application pour arrêter l\'application en arrière-plan.</string>
+    <string name="szBamowiRunnningBackground">Bamowi s\'exécute en arrière-plan</string>
+    <string name="log_deactivated">La journalisation est désactivée dans les paramètres</string>
+    <string name="szDisclaimer1">Si votre smartphone manque de mémoire, il est possible que le système Android arrête l\'enregistrement de la
+        température et que les valeurs dans le graphique ne soient pas correctes.\nCertains smartphones ne fournissent pas la température de
+        la batterie et affichent toujours le même valeur (par exemple, 25°C ou 30°C).</string>
+
+    <!-- new V2.1  -->
+    <string name="reset_level">Réinitialiser le niveau</string>
+    <string name="reset_temperature">Réinitialiser la température</string>
+    <string name="reset_volt">Réinitialiser la tension</string>
+    <string name="reset_msg">Réinitialiser les valeurs à long terme aux valeurs actuelles?</string>
+    <string name="started">Commencé:</string>
+    <string name="stopped">Arrêté:</string>
+    <string name="summary_hide_volt">Ne pas enregistrer et ne pas afficher la tension de la batterie</string>
+    <string name="pref_title_hide_volt">Masquer la tension</string>
+    <string name="szCharged">\nChargé</string>
+    <string name="szTo">à</string>
+    <string name="szFrom">de</string>
+    <string name="health_status">État de santé: </string>
+    <string name="pref_old_screen_summary">Afficher le simple, ancien écran principal</string>
+    <string name="pref_old_screen_title">Écran ancien</string>
+    <string name="msg_old_screen">L\'application va maintenant redémarrer pour définir ce changement.</string>
+    <string name="szStartupHintMainV3">Android vous avertit que Bamowi fonctionne en arrière-plan.
+        \nCette application exécute un service en arrière-plan pour observer la température de la batterie,
+        ce qui est nécessaire pour vous informer d\'une température trop basse ou trop élevée.
+    </string>
+    <string name="szHistoryLevel">histoire niveau de batterie</string>
+    <string name="szHistoryTemp">histoire temperature</string>
+    <string name="szHistoryVolt">histoire voltage</string>
+
+    <!-- new V2.3  -->
+    <string name="szNotificationChannelDescriptionTemp">Avertit si la batterie atteint une certaine limite de température. Définissez la limite dans les paramètres de l\'application.</string>
+    <string name="szNotificationChannelDescriptionCurrentTemp">Affiche la température actuelle de la batterie</string>
+
+    <string name="szBatTempWarning">Avertissement température</string>
+    <string name="szCurrentBatTemp">Température batterie</string>
+
+    <string name="msg_optimize">Vous pouvez ajouter Bamowi à la liste blanche afin qu\'il ne soit pas optimisé par la batterie par
+        le système Android et continue de fonctionner pour vous mettre à jour avec des notifications de température de la batterie.
+        \n\nRéglez dans l\'écran suivant Bamowi sur \"non optimisé\".</string>
+    <string name="background_optimization">Optimisation des opérations d\'arrière-plan</string>
+    <string name="pref_optim_summary">Permet de ne pas optimiser Bamowi et de le faire toujours fonctionner</string>
+    <string name="pref_optim_title">Changer l\'optimisation de la batterie pour Bamowi</string>
+    <string name="szCurrentBatTempInNotifBar">Température dans la barre de notification</string>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="szBatTemp">Akku Temperatur</string>
+    <string name="szBatUnknown">unbekannt</string>
+    <string name="szBatCold">unterkühlt</string>
+    <string name="szBatDead">tot</string>
+    <string name="szBatOvervoltage">Überspannung</string>
+    <string name="szBatOverheat">überhitzt</string>
+    <string name="szBatUnspec">unbekannter Fehler</string>
+    <string name="szPlugUnknown">unbekannt</string>
+    <string name="pref_title_allow_notifications">Akku Temperatur Warnung</string>
+    <string name="pref_title_min_temp_notification">Benachrichtigung wenn Temperatur kleiner</string>
+
+    <string name="pref_title_max_temp_notification">Benachrichtigung wenn Temperatur größer</string>
+    <string name="summary_notify_bat">Benachrichtige wenn die Akku Temperatur einen Grenzwert über-/unterschreitet</string>
+    <string name="battery_notification_long_text">"Aktuell "</string>
+    <string name="szMaxRatingsLong">Langzeit Grenzwerte</string>
+    <string name="feedback">Sende Feedback</string>
+    <string name="szStartupHintHist">Die Graphen sind leer wenn die App neu installiert wird. Bamowi muss erst Werte aufzeichnen welche in wenigen Minuten sichtbar sind.</string>
+    <string name="szWelcome">Willkommen</string>
+    <string name="pref_title_use_fahrenheit">Fahrenheit</string>
+    <string name="fahrenheit_switch">Benutze Fahrenheit statt Celsius</string>
+
+    <string name="szBamowiRunnningBackground">Bamowi läuft im Hintergrund</string>
+    <string name="title_activity_app_info">Hilfe und über Bamowi</string>
+    <string name="szHelpAndHints">Hilfe und Hinweise</string>
+    <string name="szContactIntro">Häufig versuchen mich Benutzer über die Bewertungen im Google Play Store zu kontaktieren.
+        Leider ist die Anzahl Zeichen für eine Antwort stark begrenzt. Für bessere Unterstützung Schreiben Sie bitte an:</string>
+
+    <string name="szHelpFaq">Hilfe und Informationen</string>
+    <string name="szHelpIntro"> Dieser Abschnitt beschreibt das Verhalten der App und die verschiedenen Einstellungen.
+        Für mehr Informationen, Fragen oder Verbesserungsvorschläge Schreiben Sie bitte an die Email Adresse ganz unten oder über den \"Sende Feedback\" Button.
+    </string>
+    <string name="szFaqTitle1">Zweck der App</string>
+    <string name="szFaq1">Bamowi beobachtet den Akkuzustand Ihres Telefons. Daher muss ein Programm
+    im Hintergrund ausgeführt werden, um das Verhalten des Akkus zu überwachen. Der Akkuverbrauch ist
+    sehr gering, deutlich weniger als 1%. Der Hauptzweck von Bamowi ist es, Sie zu warnen, wenn die
+    Akkutemperatur zu niedrig oder zu hoch ist. Darüber hinaus gibt es ein zugehöriges Widget
+    welches denselben Hintergrundprozess verwendet. Dieses Widget gibt Ihnen einen sofortigen Überblick
+    über den aktuellen Status Ihres Akkus. \nBeachten Sie, dass Bamowi nicht den Zweck hat, den
+    Akkuverbrauch zu senken oder zu optimieren. Dafür gibt es andere Apps.
+    </string>
+
+    <string name="szFaqTitle2">Einstellungen der Benachrichtigungen</string>
+    <string name="szFaq2">
+    Seit Android Oreo (Android 8) hat Google das Verhalten von Benachrichtigungen und Hintergrundaufgaben
+    (Android Services) geändert. Es ist nicht mehr möglich, eine App im Hintergrund auszuführen,
+    nachdem sie geschlossen wurde, ohne dass der Benutzer benachrichtigt wird. Auf diese Weise sieht
+    der Benutzer, dass die App noch ausgeführt wird. Bamowi muss im Hintergrund laufen, jedoch kann
+    die Benachrichtigung deaktiviert werden.
+    </string>
+    <string name="szFaq22">
+    Stellen Sie sicher, dass die Benachrichtigung \"Temperatur Warnung\" nicht deaktiviert ist.
+        \nWenn Sie Android 7.1 oder älter haben, ist es leider nicht möglich einzelne Benachrichtigungen
+    zu deaktivieren, nur alle Benachrichtigungen. Das heißt, wenn Sie die Benachrichtigungen deaktivieren,
+    bekommen Sie auch keine Warnung mehr wenn die Temperatur Grenze überschritten wurde.
+</string>
+
+    <string name="szFaqTitle3">Gelegentliches merkwürdiges Verhalten des Widgets</string>
+    <string name="szFaq3">
+    Einige Smartphone-Hersteller passen das Android-System an ihre Bedürfnisse an und verletzen dabei
+    die Android-Richtlinien von Google. Sie implementieren ihre eigenen Akkuspar-Apps, welche die
+    meisten Apps im Hintergrund beenden um Akku zu sparen.
+
+    \n\nManchmal ist Bamowi von diesem Verhalten betroffen und wird geschlossen. In solchen Fällen
+    können Sie die Einstellungen Ihres Smartphones manuell ändern. Versuchen Sie, die App-Launch
+    Einstellungen der Bamowi-App von \"Automatisch starten\" auf \"Manuell\" zu ändern.
+
+</string>
+    <string name="szFaq33">Dies ist nicht auf allen Android Versionen verfügbar.
+    \n\nDarüber hinaus erlauben einige Hersteller, Apps auf die Whitelist zu setzen,
+    um sie von der Akkuoptimierung auszuschließen.
+    Stellen Sie schließlich sicher, dass die Benachrichtigung \"Temperatur Warnung\" nicht deaktiviert ist.
+</string>
+
+    <string name="szFaqTitle4">Zukünftige Entwicklungen</string>
+    <string name="szFaq4">- Data Export
+        \n- Erweiterter Logging Verlauf und bessere Darstellung
+    </string>
+    <string name="action_toggle_dots">Punkte toggeln</string>
+    <string name="action_toggle_values">Werte toggeln</string>
+    <string name="szHint">Hinweis</string>
+
+    <!-- new V2.0  -->
+    <string name="szLogging">Logging und Grafik</string>
+    <string name="pref_title_logging_duration">Log Dauer</string>
+    <string name="szToggleLevel">Akkustand toggeln</string>
+    <string name="szTemperature">Temperatur</string>
+    <string name="szVoltage">Spannung</string>
+    <string name="szBatLevl">Akkustand</string>
+    <string name="szServiceDescription">Bamowi Akku-Überwachung und Widget</string>
+    <string name="szOverview">Übersicht</string>
+
+    <string name="szResetZoom">Zoom zurücksetzen</string>
+    <string name="auto_restart">Automatischer App-Neustart</string>
+    <string name="sum_pref_run_service">Benachrichtigungen, Widget und Logging der Akkudaten</string>
+    <string name="allow_background_ops">Hintergrundaktivitäten zulassen</string>
+    <string name="szHideNotification">Zum Ausblenden klicken und deaktivieren Sie \"Benachrichtigungen anzeigen\" oder gehen Sie zu den App-Einstellungen, um die Hintergrundaktivitäten zu stoppen</string>
+    <string name="log_deactivated">Das Logging ist in den Einstellungen deaktiviert.</string>
+    <string name="szDisclaimer1">Wenn auf Ihrem Smartphone nicht mehr genügend Arbeitsspeicher vorhanden ist, stoppt das Android-System möglicherweise die Temperaturprotokollierung und die Werte in der Grafik sind nicht korrekt.\nEinige Smartphones liefern keine Akkutemperatur und zeigen immer den gleichen Wert an (z.B. 25°C oder 30°C).</string>
+
+    <!-- new V2.1  -->
+    <string name="reset_level">Akkustand zurücksetzen</string>
+    <string name="reset_temperature">Temperatur zurücksetzen</string>
+    <string name="reset_volt">Spannung zurücksetzen</string>
+    <string name="reset_msg">Langzeitwerte auf aktuelle Werte zurücksetzen?</string>
+    <string name="started">Gestartet:</string>
+    <string name="stopped">Gestoppt:</string>
+    <string name="summary_hide_volt">Nicht loggen und die Akkuspannung nicht anzeigen</string>
+    <string name="pref_title_hide_volt">Spannung ausblenden</string>
+    <string name="szCharged">\nGeladen</string>
+    <string name="szTo">bis</string>
+    <string name="szFrom">von</string>
+    <string name="health_status">Gesundheitszustand: </string>
+    <string name="pref_old_screen_summary">Zeige das alte, einfache Layout beim Start</string>
+    <string name="pref_old_screen_title">Altes Layout</string>
+    <string name="msg_old_screen">Die App wird jetzt neu gestartet um diese Änderung festzulegen.</string>
+    <string name="szStartupHintMainV3">Android warnt Sie, dass Bamowi im Hintergrund ausgeführt wird.
+        \nDiese App führt einen Hintergrunddienst aus, um die Akkutemperatur zu beobachten. Dies ist erforderlich,
+        um über zu niedrige oder zu hohe Temperaturen zu benachrichtigen.
+    </string>
+    <string name="szHistoryLevel">Verlauf Akkustand</string>
+    <string name="szHistoryTemp">Verlauf Akku Temperatur</string>
+    <string name="szHistoryVolt">Verlauf Akku Spannung</string>
+
+    <!-- new V2.3  -->
+    <string name="szNotificationChannelDescriptionTemp">Benachrichtigt wenn der Akku ein bestimmtes Temperatur Limit überschritten hat. Setzen Sie das Limit in den App Einstellungen.</string>
+    <string name="szNotificationChannelDescriptionCurrentTemp">Zeigt die aktuelle Akku Temperatur</string>
+
+    <string name="szBatTempWarning">Temperatur Warnung</string>
+    <string name="szCurrentBatTemp">Akku Temperatur</string>
+
+    <string name="msg_optimize">Sie können Bamowi auf die Liste setzen um nicht vom Android-System akku-optimiert zu werden.
+        Bamowi wird weiterhin ausgeführt um Sie über Akku Temperaturen zu benachrichtigen.\n\nSetzen Sie im folgenden Bildschirm Bamowi auf \"nicht optimiert\".</string>
+    <string name="background_optimization">Optimierung der Hintergrund-Aufgaben</string>
+    <string name="pref_optim_summary">Bamowi nicht optimieren und immer aktiv lassen</string>
+    <string name="pref_optim_title">Ändere Akkuoptimierung für Bamowi</string>
+    <string name="szCurrentBatTempInNotifBar">Temperatur in der Benachrichtigungsleiste</string>
+    <string name="Mon">Mo</string>
+    <string name="Tue">Di</string>
+    <string name="Wed">Mi</string>
+    <string name="Thu">Do</string>
+    <string name="Fri">Fr</string>
+    <string name="Sat">Sa</string>
+    <string name="Sun">So</string>
+</resources>
