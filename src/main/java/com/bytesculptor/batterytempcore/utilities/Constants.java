@@ -15,6 +15,7 @@ public class Constants {
 
     public static final long MILLIS_PER_HOUR = 3600 * 1000;
     public static final float TEXT_SIZE_GRAPH_AXIS = 11.0f;
+    public static final int GRAPH_ANIMATION_TIME_IN_MS = 1200;
 
     public static final int BATTERY_EVENT_NOTIFY_HIGH_LIMIT = 2000;
     public static final int BATTERY_EVENT_NOTIFY_LOW_LIMIT = 2001;
