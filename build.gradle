@@ -44,7 +44,7 @@ dependencies {
 
     implementation 'com.shawnlin:number-picker:2.4.11'
 
-    implementation project(':bytesculptorlib')
+    implementation project(':ByteSculptorLib')
 }
 repositories {
     mavenCentral()
