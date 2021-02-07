@@ -112,8 +112,6 @@ public class Constants {
     public static final String PREF_showValuesVolt = "showValuesVolt";
     public static final String PREF_showLevelVolt = "showLevelVolt";
 
-    public static final String CHARGING_DATA_PATH = "com.bytesculptor.bamowiplus.charging";
-
     // database
     public static final String DATABASE_NAME = "batteryLog.db";
     private static final int DATABASE_VERSION = 1;
