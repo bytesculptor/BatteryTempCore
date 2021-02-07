@@ -1,3 +1,14 @@
+/*
+ * Copyright (c) 2017 - 2021  Byte Sculptor Software  - All Rights Reserved
+ *
+ * All information contained herein is and remains the property of Byte Sculptor Software.
+ * Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
+ * written permission is obtained from Byte Sculptor Software.
+ *
+ * Romeo Rondinelli - bytesculptor@gmail.com
+ *
+ */
+
 package com.bytesculptor.batterytempcore.dialogs;
 
 import android.app.Dialog;
@@ -8,8 +19,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.bytesculptor.batterytempcore.R;
-
-import static com.bytesculptor.batterytempcore.utilities.Constants.HINT_KEY_FIRST_START;
+import com.bytesculptor.batterytempcore.utilities.Constants;
 
 /**
  * Created by ro on 25.08.17.
@@ -39,7 +49,7 @@ public class DialogStartupHints extends DialogFragment {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        if (key == HINT_KEY_FIRST_START) {
+        if (key == Constants.HINT_KEY_FIRST_START) {
             builder.setMessage(helpText).setTitle(getString(R.string.szWelcome));
         } else {
             builder.setMessage(helpText).setTitle(getString(R.string.szHint));

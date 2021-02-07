@@ -1,3 +1,14 @@
+/*
+ * Copyright (c) 2017 - 2021  Byte Sculptor Software  - All Rights Reserved
+ *
+ * All information contained herein is and remains the property of Byte Sculptor Software.
+ * Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
+ * written permission is obtained from Byte Sculptor Software.
+ *
+ * Romeo Rondinelli - bytesculptor@gmail.com
+ *
+ */
+
 package com.bytesculptor.batterytempcore.dialogs;
 
 import android.app.Dialog;
@@ -8,12 +19,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.bytesculptor.batterytempcore.R;
-
-import org.jetbrains.annotations.NotNull;
-
-import static com.bytesculptor.batterytempcore.utilities.Constants.ITEM_LEVEL;
-import static com.bytesculptor.batterytempcore.utilities.Constants.ITEM_TEMP;
-import static com.bytesculptor.batterytempcore.utilities.Constants.ITEM_VOLT;
+import com.bytesculptor.batterytempcore.utilities.Constants;
 
 public class DialogResetLongTerm extends DialogFragment {
 
@@ -23,7 +29,7 @@ public class DialogResetLongTerm extends DialogFragment {
 
     public ResetDialogListener mListener;
 
-    public void onAttach(@NotNull Context context) {
+    public void onAttach(Context context) {
         super.onAttach(context);
 
         try {
@@ -39,15 +45,15 @@ public class DialogResetLongTerm extends DialogFragment {
         int resetItem = args.getInt("reset", 0);
 
         switch (resetItem) {
-            case ITEM_LEVEL:
+            case Constants.ITEM_LEVEL:
                 builder.setTitle(R.string.reset_level);
                 break;
 
-            case ITEM_TEMP:
+            case Constants.ITEM_TEMP:
                 builder.setTitle(R.string.reset_temperature);
                 break;
 
-            case ITEM_VOLT:
+            case Constants.ITEM_VOLT:
                 builder.setTitle(R.string.reset_volt);
                 break;
         }
