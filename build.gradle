@@ -54,7 +54,7 @@ dependencies {
     // external libs
     implementation 'com.shawnlin:number-picker:2.4.11'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
-    //implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
+    implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
 }
 repositories {
     mavenCentral()
