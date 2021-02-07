@@ -25,18 +25,11 @@ import androidx.fragment.app.DialogFragment;
 import androidx.preference.PreferenceManager;
 
 import com.bytesculptor.batterytempcore.R;
+import com.bytesculptor.batterytempcore.utilities.Constants;
 import com.bytesculptor.batterytempcore.utilities.LocalLibrary;
 import com.shawnlin.numberpicker.NumberPicker;
 
-import static com.bytesculptor.batterytempcore.utilities.Constants.DEFAULT_LOW_TEMP_WARNING_CELSIUS;
-import static com.bytesculptor.batterytempcore.utilities.Constants.DEFAULT_LOW_TEMP_WARNING_FAHRENHEIT;
 import static com.bytesculptor.batterytempcore.utilities.Constants.KEY_PREF_FAHRENHEIT_SWITCH;
-import static com.bytesculptor.batterytempcore.utilities.Constants.LOW_TEMP_WARNING_CELSIUS_MAX;
-import static com.bytesculptor.batterytempcore.utilities.Constants.LOW_TEMP_WARNING_CELSIUS_MIN;
-import static com.bytesculptor.batterytempcore.utilities.Constants.LOW_TEMP_WARNING_FAHRENHEIT_MAX;
-import static com.bytesculptor.batterytempcore.utilities.Constants.LOW_TEMP_WARNING_FAHRENHEIT_MIN;
-import static com.bytesculptor.batterytempcore.utilities.Constants.PREF_tempNotificationLowCelsius;
-import static com.bytesculptor.batterytempcore.utilities.Constants.PREF_tempNotificationLowFahrenheit;
 
 public class TemperatureLowDialog extends DialogFragment {
     String TAG = TemperatureLowDialog.class.getSimpleName();
@@ -71,14 +64,14 @@ public class TemperatureLowDialog extends DialogFragment {
         NumberPicker numberPicker = view.findViewById(R.id.number_picker);
 
         if (bFahrenheit) {
-            numberPicker.setMinValue(LOW_TEMP_WARNING_FAHRENHEIT_MIN);
-            numberPicker.setMaxValue(LOW_TEMP_WARNING_FAHRENHEIT_MAX);
-            int minLimit = settings.getInt(PREF_tempNotificationLowFahrenheit, DEFAULT_LOW_TEMP_WARNING_FAHRENHEIT);
+            numberPicker.setMinValue(Constants.LOW_TEMP_WARNING_FAHRENHEIT_MIN);
+            numberPicker.setMaxValue(Constants.LOW_TEMP_WARNING_FAHRENHEIT_MAX);
+            int minLimit = settings.getInt(Constants.PREF_tempNotificationLowFahrenheit, Constants.DEFAULT_LOW_TEMP_WARNING_FAHRENHEIT);
             numberPicker.setValue(minLimit);
         } else {
-            numberPicker.setMinValue(LOW_TEMP_WARNING_CELSIUS_MIN);
-            numberPicker.setMaxValue(LOW_TEMP_WARNING_CELSIUS_MAX);
-            int minLimit = settings.getInt(PREF_tempNotificationLowCelsius, DEFAULT_LOW_TEMP_WARNING_CELSIUS);
+            numberPicker.setMinValue(Constants.LOW_TEMP_WARNING_CELSIUS_MIN);
+            numberPicker.setMaxValue(Constants.LOW_TEMP_WARNING_CELSIUS_MAX);
+            int minLimit = settings.getInt(Constants.PREF_tempNotificationLowCelsius, Constants.DEFAULT_LOW_TEMP_WARNING_CELSIUS);
             numberPicker.setValue(minLimit);
         }
 
@@ -92,11 +85,11 @@ public class TemperatureLowDialog extends DialogFragment {
             SharedPreferences.Editor editor = settings.edit();
             int returnValue = numberPicker.getValue();
             if (bFahrenheit) {
-                editor.putInt(PREF_tempNotificationLowFahrenheit, returnValue);
-                editor.putInt(PREF_tempNotificationLowCelsius, (int) LocalLibrary.convertToCelsius(returnValue));
+                editor.putInt(Constants.PREF_tempNotificationLowFahrenheit, returnValue);
+                editor.putInt(Constants.PREF_tempNotificationLowCelsius, (int) LocalLibrary.convertToCelsius(returnValue));
             } else {
-                editor.putInt(PREF_tempNotificationLowFahrenheit, (int) LocalLibrary.convertToFahrenheit(returnValue));
-                editor.putInt(PREF_tempNotificationLowCelsius, returnValue);
+                editor.putInt(Constants.PREF_tempNotificationLowFahrenheit, (int) LocalLibrary.convertToFahrenheit(returnValue));
+                editor.putInt(Constants.PREF_tempNotificationLowCelsius, returnValue);
             }
             editor.apply();
             mListener.onLowTempLimitChanged(returnValue);

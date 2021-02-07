@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2017 - 2021  Byte Sculptor Software  - All Rights Reserved
+  ~
+  ~ All information contained herein is and remains the property of Byte Sculptor Software.
+  ~ Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
+  ~ written permission is obtained from Byte Sculptor Software.
+  ~
+  ~ Romeo Rondinelli - bytesculptor@gmail.com
+  ~
+  -->
+
 <resources>
     <string name="battery_notification_long_text">"Attualmente "</string>
     <string name="szBatOverheat">surriscaldato</string>
@@ -23,8 +33,6 @@
     <string name="szBamowiRunnningBackground">Bamowi in esecuzione background</string>
     <string name="title_activity_app_info">Aiuto e informazioni su Bamowi</string>
     <string name="szHelpAndHints">Aiuto e suggerimenti</string>
-    <string name="szContactIntro">Molti utenti provano a contattarmi tramite il sistema di valuta dell\'app nel Google Play Store.
-        Sfortunatamente, lo spazio per una risposta è limitato da Google. Per un migliore aiuto, si prega di scrivere a:</string>
 
     <string name="szHelpFaq">Assistenza e informazioni</string>
 
@@ -110,8 +118,6 @@
     <string name="szTo">a</string>
     <string name="szFrom">da</string>
     <string name="health_status">Stato di salute: </string>
-    <string name="pref_old_screen_summary">Mostra la vecchia, semplice schermata principale</string>
-    <string name="pref_old_screen_title">Schermo vecchio</string>
     <string name="msg_old_screen">L\'app ora si riavvierà per impostare questa modifica.</string>
     <string name="szStartupHintMainV3">Android vi avvisa che Bamowi è in esecuzione in background.
         \nQuesta app esegue un servizio in background per osservare la temperatura della batteria,
@@ -128,11 +134,14 @@
     <string name="szBatTempWarning">Avviso temperatura</string>
     <string name="szCurrentBatTemp">Temperatura batteria</string>
 
-    <string name="msg_optimize">Puoi autorizzare Bamowi in modo che non sia ottimizzato per la batteria dal sistema Android e
-        continui a funzionare per aggiornarti con le notifiche sulla temperatura della batteria.
-        \n\nImpostare nella schermata seguente Bamowi su \"non ottimizzato\".</string>
-    <string name="background_optimization">Ottimizzazione delle operazioni in background</string>
-    <string name="pref_optim_summary">Consentire di non ottimizzare Bamowi e mantenerlo sempre attivo</string>
-    <string name="pref_optim_title">Cambia ottimizzazione della batteria per Bamowi</string>
+    <!-- new V2.8  -->
     <string name="szCurrentBatTempInNotifBar">Temperatura nella barra di notifica</string>
+    <string name="pref_optim_title">Ottimizzazione della batteria per Bamowi</string>
+    <string name="szAskForBatOptimisation1">Si consiglia di disabilitare l\'ottimizzazione della batteria
+        per questa app. Questo impedirà il sistema operativo Android per chiudere l\'app in modo imprevisto.
+        Bamowi può funzionare in modo affidabile solo se rimane attivo in background.
+        \n\nFai clic su OK per procedere. Dal menu a discesa dei filtri seleziona \"Tutte le app\",
+        scegli Bamowi e impostalo su \"Non ottimizzare\".</string>
+    <string name="szAskForBatOptimisation2">\n\nPuoi sempre modificarlo dal menu delle impostazioni di Bamowi.</string>
+    <string name="pref_simple_screen_title">Schermo semplice</string>
 </resources>

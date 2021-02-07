@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2017 - 2021  Byte Sculptor Software  - All Rights Reserved
+  ~
+  ~ All information contained herein is and remains the property of Byte Sculptor Software.
+  ~ Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
+  ~ written permission is obtained from Byte Sculptor Software.
+  ~
+  ~ Romeo Rondinelli - bytesculptor@gmail.com
+  ~
+  -->
+
 <resources>
     <string name="szBatTemp">Akku Temperatur</string>
     <string name="szBatUnknown">unbekannt</string>
@@ -24,8 +34,6 @@
     <string name="szBamowiRunnningBackground">Bamowi läuft im Hintergrund</string>
     <string name="title_activity_app_info">Hilfe und über Bamowi</string>
     <string name="szHelpAndHints">Hilfe und Hinweise</string>
-    <string name="szContactIntro">Häufig versuchen mich Benutzer über die Bewertungen im Google Play Store zu kontaktieren.
-        Leider ist die Anzahl Zeichen für eine Antwort stark begrenzt. Für bessere Unterstützung Schreiben Sie bitte an:</string>
 
     <string name="szHelpFaq">Hilfe und Informationen</string>
     <string name="szHelpIntro"> Dieser Abschnitt beschreibt das Verhalten der App und die verschiedenen Einstellungen.
@@ -112,8 +120,6 @@
     <string name="szTo">bis</string>
     <string name="szFrom">von</string>
     <string name="health_status">Gesundheitszustand: </string>
-    <string name="pref_old_screen_summary">Zeige das alte, einfache Layout beim Start</string>
-    <string name="pref_old_screen_title">Altes Layout</string>
     <string name="msg_old_screen">Die App wird jetzt neu gestartet um diese Änderung festzulegen.</string>
     <string name="szStartupHintMainV3">Android warnt Sie, dass Bamowi im Hintergrund ausgeführt wird.
         \nDiese App führt einen Hintergrunddienst aus, um die Akkutemperatur zu beobachten. Dies ist erforderlich,
@@ -130,17 +136,16 @@
     <string name="szBatTempWarning">Temperatur Warnung</string>
     <string name="szCurrentBatTemp">Akku Temperatur</string>
 
-    <string name="msg_optimize">Sie können Bamowi auf die Liste setzen um nicht vom Android-System akku-optimiert zu werden.
-        Bamowi wird weiterhin ausgeführt um Sie über Akku Temperaturen zu benachrichtigen.\n\nSetzen Sie im folgenden Bildschirm Bamowi auf \"nicht optimiert\".</string>
-    <string name="background_optimization">Optimierung der Hintergrund-Aufgaben</string>
-    <string name="pref_optim_summary">Bamowi nicht optimieren und immer aktiv lassen</string>
-    <string name="pref_optim_title">Ändere Akkuoptimierung für Bamowi</string>
+    <!-- new V2.8  -->
     <string name="szCurrentBatTempInNotifBar">Temperatur in der Benachrichtigungsleiste</string>
-    <string name="Mon">Mo</string>
-    <string name="Tue">Di</string>
-    <string name="Wed">Mi</string>
-    <string name="Thu">Do</string>
-    <string name="Fri">Fr</string>
-    <string name="Sat">Sa</string>
-    <string name="Sun">So</string>
+    <string name="pref_optim_title">Akkuoptimierung für Bamowi</string>
+    <string name="szAskForBatOptimisation1">Es wird empfohlen, die Akkuoptimierung für diese App
+        zu deaktivieren. Damit wird verhindert, dass das Android-Betriebssystem die App unerwartet beendet.
+        Bamowi kann nur dann zuverlässig arbeiten, wenn es im Hintergrund aktiv bleibt.
+        \n\nKlicken Sie auf OK, um fortzufahren. Wählen Sie in der Filter-Dropdown-Liste \"Alle Apps\",
+        wählen Sie \"Bamowi\" und setzen Sie es auf \"Nicht optimieren\".</string>
+    <string name="szAskForBatOptimisation2">\n\nSie können dies jederzeit über die Bamowi Einstellungen ändern.</string>
+    <string name="pref_simple_screen_title">Einfaches Layout</string>
+
+    <!-- new V2.8  -->
 </resources>

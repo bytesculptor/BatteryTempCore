@@ -1,3 +1,14 @@
+<!--
+  ~ Copyright (c) 2017 - 2021  Byte Sculptor Software  - All Rights Reserved
+  ~
+  ~ All information contained herein is and remains the property of Byte Sculptor Software.
+  ~ Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
+  ~ written permission is obtained from Byte Sculptor Software.
+  ~
+  ~ Romeo Rondinelli - bytesculptor@gmail.com
+  ~
+  -->
+
 <resources>
 
     <string name="szBatUnknown">unknown</string>
@@ -107,7 +118,7 @@
         \nSome smartphones do not provide battery temperature and show always the same value (e.g. 25°C or 30°C).</string>
 
 
-    <!-- new V2.1 Bamowi basic -->
+    <!-- new V2.1  -->
     <string name="reset_level">Reset level</string>
     <string name="reset_temperature">Reset temperature</string>
     <string name="reset_volt">Reset voltage</string>
@@ -120,8 +131,6 @@
     <string name="szTo">to</string>
     <string name="szFrom">from</string>
     <string name="health_status">Health status:</string>
-    <string name="pref_old_screen_summary">Show the old, simple main screen</string>
-    <string name="pref_old_screen_title">Old screen layout</string>
     <string name="msg_old_screen">The app will now restart to set this change.</string>
     <string name="szStartupHintMainV3">Android gives you a warning that Bamowi is running in the background.
         This app runs a background service to observe the battery temperature, what is necessary to notify you about too low or too high temperature.
@@ -130,36 +139,25 @@
     <string name="szHistoryVolt">history voltage</string>
     <string name="szHistoryLevel">history battery level</string>
 
-
-    <!-- new V2.3 Bamowi basic -->
+    <!-- new V2.3  -->
     <string name="szNotificationChannelDescriptionTemp">Notifies if the battery reaches a certain temperature limit. Set the limit in the app\'s settings.</string>
     <string name="szNotificationChannelDescriptionCurrentTemp">Shows the current battery temperature</string>
 
     <string name="szBatTempWarning">Temperature warning</string>
     <string name="szCurrentBatTemp">Battery temperature</string>
 
-    <string name="msg_optimize">You can set Bamowi to not be battery optimized by the Android system and keep running
-        to update you with battery temperature notifications.
-        \n\nSet in the following screen Bamowi to \"not optimized\".
-    </string>
-    <string name="background_optimization">Background operation optimization</string>
-    <string name="pref_optim_summary">Allow to not optimize Bamowi and keep it always running</string>
-    <string name="pref_optim_title">Change battery optimization for Bamowi</string>
-
-
-    <!-- new V0.5 BamowiPlus -->
-    <string name="avg">Average:</string>
-    <string name="szFull">Full</string>
-
-    <string name="reset_value">reset value</string>
-
-    <string name="Mon">Mon</string>
-    <string name="Tue">Tue</string>
-    <string name="Wed">Wed</string>
-    <string name="Thu">Thu</string>
-    <string name="Fri">Fri</string>
-    <string name="Sat">Sat</string>
-    <string name="Sun">Sun</string>
-
+    <!-- new V2.8  -->
     <string name="szCurrentBatTempInNotifBar">Temperature in notification bar</string>
+    <string name="pref_optim_title">Battery optimisation for Bamowi</string>
+    <string name="szAskForBatOptimisation1">
+        It is recommended you disable battery optimisation for this app. This will prevent
+        the Android OS to shut down the app unexpectedly. Bamowi can work reliably only if it remains active in the background.
+        \n\nClick OK to proceed. From the filter drop-down select \"All apps\", choose Bamowi and set it to \"Not optimised\".
+    </string>
+    <string name="szAskForBatOptimisation2">
+        \n\nYou can always change this from the Bamowi settings menu.
+    </string>
+    <string name="pref_simple_screen_title">Simple layout</string>
+
+
 </resources>
