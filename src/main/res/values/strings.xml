@@ -150,10 +150,7 @@
     <!-- new V0.5 BamowiPlus -->
     <string name="avg">Average:</string>
     <string name="szFull">Full</string>
-    <string name="title_activity_health">HealthActivity</string>
-    <string name="tab_text_1">Timeline</string>
-    <string name="tab_text_2">Statistics</string>
-    <string name="battery_health">Battery health</string>
+
     <string name="reset_value">reset value</string>
 
     <string name="Mon">Mon</string>
