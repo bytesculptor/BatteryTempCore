@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2017 - 2021  Byte Sculptor Software  - All Rights Reserved
+  ~
+  ~ All information contained herein is and remains the property of Byte Sculptor Software.
+  ~ Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
+  ~ written permission is obtained from Byte Sculptor Software.
+  ~
+  ~ Romeo Rondinelli - bytesculptor@gmail.com
+  ~
+  -->
+
 <resources>
     <color name="colorBamowiGrey">#bcbcbc</color>
 
@@ -6,35 +16,28 @@
     <color name="colorPrimaryDark">#004ba0</color>
     <color name="colorAccent">@color/colorPrimary</color>
 
-    <color name="colorHealthHeader">@color/colorAccent</color>
+    <color name="colorDarkMode">#232323</color>
+    <color name="colorBottomNavBackground">#FBFBFB</color>
+    <color name="colorBottomNavIcon">#838383</color>
+    <color name="main_background">#EEEEEE</color>
+    <color name="tab_color">@color/main_background</color>
 
-    <color name="dark_mode">#272727</color>
-    <color name="ic_launcher_background">@color/dark_mode</color>
-    <color name="battery_background">@color/dark_mode</color>
+    <color name="ic_launcher_background">@color/colorDarkMode</color>
+    <color name="colorBigBatteryBackground">@color/colorDarkMode</color>
 
     <color name="colorGood">#0ae745</color>
     <color name="colorWarning">#f4f13a</color>
     <color name="colorBad">#EF251E</color>
-
-    <color name="colorTempNormal">#0ae745</color>
     <color name="colorTempCool">#0180E1</color>
-    <color name="colorTempWarm">#f4f13a</color>
-    <color name="colorTempHot">#EF251E</color>
 
     <color name="colorWidgetBackground">@color/colorBamowiGrey</color>
-    <color name="colorWidgetBackgroundStroke">@color/dark_mode</color>
+    <color name="colorWidgetBackgroundStroke">@color/colorDarkMode</color>
 
-    <color name="colorBoxesBackground">@color/colorBamowiGrey</color>
-    <color name="colorBoxesBackgroundStroke">@color/colorWidgetBackgroundStroke</color>
+    <color name="colorMainBoxesBackground">#FBFBFB</color>
+    <color name="colorLimitBoxesBackground">@color/colorBamowiGrey</color>
+    <color name="colorLimitBoxesBackgroundStroke">@color/colorWidgetBackgroundStroke</color>
 
-    <color name="colorDarkModeBlack">#121212</color>
     <color name="colorButton">#121212</color>
-
-    <color name="colorIconGrey">#787878</color>
-
-    <color name="colorFab">@color/colorAccent</color>
-    <color name="main_background">#EEEEEE</color>
-    <color name="box">#FBFBFB</color>
 
     <color name="tabTextColor">@color/colorAccent</color>
     <color name="tabSelectedTextColor">@color/colorAccent</color>
