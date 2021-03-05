@@ -19,8 +19,10 @@
     <color name="colorDarkMode">#232323</color>
     <color name="colorBottomNavBackground">#FBFBFB</color>
     <color name="colorBottomNavIcon">#838383</color>
-    <color name="main_background">#EEEEEE</color>
-    <color name="tab_color">@color/main_background</color>
+    <color name="colorMainBackground">#EEEEEE</color>
+    <color name="colorTabs">@color/colorMainBackground</color>
+    <color name="colorTabText">@color/colorAccent</color>
+    <color name="colorTabSelectedText">@color/colorAccent</color>
 
     <color name="ic_launcher_background">@color/colorDarkMode</color>
     <color name="colorBigBatteryBackground">@color/colorDarkMode</color>
@@ -39,6 +41,5 @@
 
     <color name="colorButton">#121212</color>
 
-    <color name="tabTextColor">@color/colorAccent</color>
-    <color name="tabSelectedTextColor">@color/colorAccent</color>
+
 </resources>
