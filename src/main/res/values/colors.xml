@@ -15,6 +15,7 @@
     <color name="colorPrimary">#1976d2</color>
     <color name="colorPrimaryDark">#004ba0</color>
     <color name="colorAccent">@color/colorPrimary</color>
+    <color name="colorAccentTransparent">#331976D2</color>
 
     <color name="colorDarkMode">#232323</color>
     <color name="colorBottomNavBackground">#FBFBFB</color>
@@ -40,6 +41,5 @@
     <color name="colorLimitBoxesBackgroundStroke">@color/colorWidgetBackgroundStroke</color>
 
     <color name="colorButton">#121212</color>
-
 
 </resources>
