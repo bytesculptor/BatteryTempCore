@@ -38,6 +38,9 @@ public interface LogDao {
     @Query("Select * from " + TABLE_NAME_LOG + " WHERE " + TIMESTAMP + " >:arg0 ORDER BY " + _ID + " ASC")
     List<LogEntity> queryLogsUntilTimestamp(long timestampInMillis);
 
+    @Query("Select * from " + TABLE_NAME_LOG + " ORDER BY " + _ID + " ASC")
+    List<LogEntity> queryLogsUntilTimestamp();
+
     @Query("Delete FROM " + TABLE_NAME_LOG)
     void deleteAll();
 

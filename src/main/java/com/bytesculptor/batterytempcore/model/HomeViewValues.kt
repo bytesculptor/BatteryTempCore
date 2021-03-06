@@ -9,17 +9,6 @@
  *
  */
 
-package com.bytesculptor.batterytempcore;
+package com.bytesculptor.batterytempcore.model
 
-import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-public class LevelActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-}
+class HomeViewValues(var level: Int, var temp: Int, var volt: Int, var plug: Int)
