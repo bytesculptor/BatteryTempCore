@@ -96,7 +96,7 @@ public class Constants {
     public static final String PREF_notifHighTemp = "notifHighTemp";
     public static final String PREF_notifHighTempDate = "notifHighTempDate";
 
-    public static final String PREF_historySlider = "history_slider";
+    public static final String PREF_historyButtonGroup = "historyButtonGroup";
 
     public static final String PREF_HINT_firstTimeApp = "firstTimeApp";
     public static final String PREF_HINT_firstTimeHist = "firstTimeHist";
