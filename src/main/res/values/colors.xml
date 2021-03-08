@@ -29,7 +29,7 @@
     <color name="colorBigBatteryBackground">@color/colorDarkMode</color>
 
     <color name="colorGood">#0ae745</color>
-    <color name="colorWarning">#f4f13a</color>
+    <color name="colorWarning">#FFF176</color>
     <color name="colorBad">#EF251E</color>
     <color name="colorTempCool">#0180E1</color>
 
