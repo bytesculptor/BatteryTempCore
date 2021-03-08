@@ -1,0 +1,61 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <!--item name="colorSurface">@color/colorPrimary</item -->
+
+        <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+
+    <style name="TabsStyle" parent="@style/Widget.AppCompat.ActionBar.TabBar">
+        <item name="android:background">@color/colorTabs</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.NoActionBar" />
+
+    <style name="PreferenceTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="android:background">@color/colorMainBackground</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="NeutralButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="AppButtons" parent="@android:style/Widget.Holo.ImageButton">
+        <item name="backgroundColor">@color/colorButton</item>
+        <item name="backgroundTint">@color/colorButton</item>
+    </style>
+
+    <style name="CustomDialogButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="backgroundColor">#00EC2727</item>
+    </style>
+
+    <style name="progressBarBatteryStyle" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/battery_progress_bar_layout</item>
+    </style>
+
+    <style name="HistoryButtonGroup" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@color/history_button_selector</item>
+    </style>
+
+</resources>
