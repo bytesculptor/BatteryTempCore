@@ -28,7 +28,7 @@
     <color name="colorBigBatteryBackground">#7C7C7C</color>
 
     <color name="colorGood">#0ae745</color>
-    <color name="colorWarning">#FFF176</color>
+    <color name="colorWarning">#FFFF00</color>
     <color name="colorBad">#EF251E</color>
     <color name="colorTempCool">#0180E1</color>
 

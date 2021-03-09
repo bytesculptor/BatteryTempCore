@@ -13,11 +13,9 @@
     <item
         android:id="@android:id/background"
         android:gravity="center_vertical|fill_horizontal">
-        <shape
-            android:shape="rectangle"
-            android:tint="?attr/colorControlNormal">
+        <shape android:shape="rectangle">
             <corners android:radius="0dp" />
-            <solid android:color="#AAAAAA" />
+            <solid android:color="#BF9F9F9F" />
         </shape>
     </item>
     <item
@@ -29,7 +27,7 @@
                 android:tint="?attr/colorControlHighlight">
                 <corners android:radius="0dp" />
                 <size android:height="0dp" />
-                <solid android:color="#919191" />
+                <solid android:color="#B3CACACA" />
             </shape>
         </scale>
     </item>
@@ -39,7 +37,7 @@
         <scale android:scaleWidth="100%">
             <shape android:shape="rectangle">
                 <corners android:radius="0dp" />
-                <solid android:color="#FFFFFF" />
+                <solid android:color="#F4F4F4" />
             </shape>
         </scale>
     </item>
