@@ -11,4 +11,4 @@
 
 package com.bytesculptor.batterytempcore.model
 
-class HomeViewValues(var level: Int, var temp: Int, var volt: Int, var plug: Int)
+class HomeViewActualValues(var level: Int, var temp: Int, var volt: Int, var plug: Int, var health: Int)
