@@ -26,7 +26,7 @@ import androidx.preference.PreferenceManager;
 
 import com.bytesculptor.batterytempcore.R;
 import com.bytesculptor.batterytempcore.utilities.Constants;
-import com.bytesculptor.batterytempcore.utilities.LocalLibrary;
+import com.bytesculptor.batterytempcore.utilities.ConversionHelpers;
 import com.shawnlin.numberpicker.NumberPicker;
 
 import static com.bytesculptor.batterytempcore.utilities.Constants.KEY_PREF_FAHRENHEIT_SWITCH;
@@ -86,9 +86,9 @@ public class TemperatureLowDialog extends DialogFragment {
             int returnValue = numberPicker.getValue();
             if (bFahrenheit) {
                 editor.putInt(Constants.PREF_tempNotificationLowFahrenheit, returnValue);
-                editor.putInt(Constants.PREF_tempNotificationLowCelsius, (int) LocalLibrary.convertToCelsius(returnValue));
+                editor.putInt(Constants.PREF_tempNotificationLowCelsius, (int) ConversionHelpers.convertToCelsius(returnValue));
             } else {
-                editor.putInt(Constants.PREF_tempNotificationLowFahrenheit, (int) LocalLibrary.convertToFahrenheit(returnValue));
+                editor.putInt(Constants.PREF_tempNotificationLowFahrenheit, (int) ConversionHelpers.convertToFahrenheit(returnValue));
                 editor.putInt(Constants.PREF_tempNotificationLowCelsius, returnValue);
             }
             editor.apply();

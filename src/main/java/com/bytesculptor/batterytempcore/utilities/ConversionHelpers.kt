@@ -13,7 +13,8 @@ package com.bytesculptor.batterytempcore.utilities
 import java.text.DateFormat
 import java.util.*
 
-object LocalLibrary {
+
+object ConversionHelpers {
     /*
      *  convert to Fahrenheit and return rounded to one decimal
      */
@@ -29,6 +30,14 @@ object LocalLibrary {
 
     fun getTimestampAsDateString(timestamp: Long): String {
         val dateFormat = DateFormat.getDateInstance()
+        return dateFormat.format(timestamp)
+    }
+
+    fun getTimestampAsDateStringWithoutYear(timestamp: Long): String {
+        val dateFormat = DateFormat.getDateInstance()
+
+
+
         return dateFormat.format(timestamp)
     }
 

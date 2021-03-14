@@ -103,26 +103,34 @@ object BamowiHelperLibrary {
 
         // charging
         if (data!!.lLastChargingStart > data.lLastChargingStop && data.lLastChargingStart != 0L) {
-            returnString = context?.getString(R.string.started) + " " + LocalLibrary.getTimestampAsTimeString(data.lLastChargingStart)
+            returnString = context?.getString(R.string.started) + " " + ConversionHelpers.getTimestampAsTimeString(data.lLastChargingStart)
 
             // not charging
         } else if (data.lLastChargingStart < data.lLastChargingStop) {
             returnString = context?.getString(R.string.stopped) + " "
-            if (DateUtils.isToday(data.lLastChargingStop)) {
-                returnString += "today "
-            } else if (DateUtils.isToday((data.lLastChargingStop) + 24 * 3600000)) {
-                returnString += "Yesterday "
-            } else {
-                returnString += LocalLibrary.getTimestampAsDateString(data.lLastChargingStop)
-            }
-            returnString += LocalLibrary.getTimestampAsTimeString(data.lLastChargingStop)
 
-            // Charged ..min from .. to ..
+            // today
+            if (DateUtils.isToday(data.lLastChargingStop)) {
+                returnString += context?.getString(R.string.szToday) + " "
+
+                // yesterday
+            } else if (DateUtils.isToday((data.lLastChargingStop) + 24 * 3600000)) {
+                returnString += context?.getString(R.string.szYesterday) + " "
+
+                // otherwise date
+            } else {
+                val flags = DateUtils.FORMAT_SHOW_DATE or DateUtils.FORMAT_NO_YEAR
+                returnString += DateUtils.formatDateTime(context, data.lLastChargingStop, flags) + " "
+            }
+
+            // and add time
+            returnString += ConversionHelpers.getTimestampAsTimeString(data.lLastChargingStop)
+
+            // Charged ..min from ..% to ..%
             returnString += (context?.getString(R.string.szCharged) + " "
-                    + getHourMinStringFromMillis(data.lLastChargingStop - data.lLastChargingStart) + " "
-                    + context?.getString(R.string.szFrom) + " "
-                    + data.lBatStartLevel + "% " + context?.getString(R.string.szTo) + " "
-                    + data.lBatStopLevel + "%")
+                    + getHourMinStringFromMillis(data.lLastChargingStop - data.lLastChargingStart) + " - "
+                    + context?.getString(R.string.szFrom) + " " + data.lBatStartLevel + "% "
+                    + context?.getString(R.string.szTo) + " " + data.lBatStopLevel + "%")
 
             val minutes: Long = getMinutesFromMillis(data.lLastChargingStop - data.lLastChargingStart)
             if (minutes > 0 && (data.lBatStopLevel - data.lBatStartLevel) > 0) { // TODO 5 to 0 temporary

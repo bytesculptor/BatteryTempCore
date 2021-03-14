@@ -57,5 +57,4 @@ class LogEntity {
     @ColumnInfo(name = Constants.DATETIME)
     var dateTime: String = ""
 
-
 }

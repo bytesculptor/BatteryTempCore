@@ -32,7 +32,7 @@ public class CustomMarkerView extends MarkerView {
 
     @Override
     public void refreshContent(Entry e, Highlight highlight) {
-        tvContent.setText("" + e.getY() + " (" + LocalLibrary.getTimestampAsTimeString((long) e.getX()) + ")");
+        tvContent.setText("" + e.getY() + " (" + ConversionHelpers.getTimestampAsTimeString((long) e.getX()) + ")");
         super.refreshContent(e, highlight);
     }
 
