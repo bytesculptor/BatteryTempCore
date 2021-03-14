@@ -23,6 +23,7 @@ public class Constants {
     public static final String KEY_PREF_NOTIF_SETTINGS_CURRENT = "KEY_PREF_NOTIF_SETTINGS_CURRENT";
     public static final String KEY_PREF_NOTIF_TEMP_LOW = "KEY_PREF_NOTIF_TEMP_LOW";
     public static final String KEY_PREF_NOTIF_TEMP_HIGH = "KEY_PREF_NOTIF_TEMP_HIGH";
+    public static final String KEY_PREF_SHOW_TEMP_ON_WARNING = "KEY_PREF_SHOW_TEMP_ON_WARNING";
 
     public static final long MILLIS_PER_HOUR = 3600 * 1000;
     public static final float TEXT_SIZE_GRAPH_AXIS = 11.0f;
