@@ -112,7 +112,7 @@
     <string name="reset_temperature">Temperatur zurücksetzen</string>
     <string name="reset_volt">Spannung zurücksetzen</string>
     <string name="reset_msg">Langzeitwerte auf aktuelle Werte zurücksetzen?</string>
-    <string name="started">Gestartet:</string>
+    <string name="started">Gestartet um %1$s</string>
     <string name="stopped">Gestoppt:</string>
     <string name="summary_hide_volt">Nicht loggen und die Akkuspannung nicht anzeigen</string>
     <string name="pref_title_hide_volt">Spannung ausblenden</string>

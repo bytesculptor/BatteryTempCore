@@ -91,7 +91,7 @@
     <string name="reset_temperature">Réinitialiser la température</string>
     <string name="reset_volt">Réinitialiser la tension</string>
     <string name="reset_msg">Réinitialiser les valeurs à long terme aux valeurs actuelles?</string>
-    <string name="started">Commencé:</string>
+    <string name="started">Commencé %1$s</string>
     <string name="stopped">Arrêté:</string>
     <string name="summary_hide_volt">Ne pas enregistrer et ne pas afficher la tension de la batterie</string>
     <string name="pref_title_hide_volt">Masquer la tension</string>

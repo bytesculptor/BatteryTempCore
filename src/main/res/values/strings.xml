@@ -123,8 +123,6 @@
     <string name="reset_temperature">Reset temperature</string>
     <string name="reset_volt">Reset voltage</string>
     <string name="reset_msg">Reset long-term values to current values?</string>
-    <string name="started">Started</string>
-    <string name="stopped">Stopped</string>
     <string name="summary_hide_volt">Don\'t log and don\'t show the battery voltage</string>
     <string name="pref_title_hide_volt">Hide voltage</string>
     <string name="szCharged">\nCharged</string>
@@ -161,6 +159,12 @@
 
     <string name="avg" translatable="false">Average:</string>
     <string name="szFull" translatable="false">Full</string>
+
+    <!-- charging date -->
+    <string name="started_ago">Started %1$s ago</string>
+    <string name="stopped_today">Stopped today at %1$s</string>
+    <string name="stopped_yesterday">Stopped yesterday at %1$s</string>
+    <string name="stopped_day">Stopped on %1$s at %2$s</string>
 
 
 </resources>

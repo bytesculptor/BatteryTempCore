@@ -94,7 +94,7 @@
     <string name="reset_temperature">Restablecer temperatura</string>
     <string name="reset_volt">Restablecer voltaje</string>
     <string name="reset_msg">¿Restablecer valores a largo plazo a los valores actuales?</string>
-    <string name="started">Iniciado:</string>
+    <string name="started">Iniciado %1$s</string>
     <string name="stopped">Detenido:</string>
     <string name="summary_hide_volt">No registres y no muestre el voltaje de la batería</string>
     <string name="pref_title_hide_volt">Ocultar voltaje</string>

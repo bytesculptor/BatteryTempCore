@@ -110,7 +110,7 @@
     <string name="reset_temperature">Resettare temperatura</string>
     <string name="reset_volt">Resettare tensione</string>
     <string name="reset_msg">Resettare i valori a lungo termine ai valori correnti?</string>
-    <string name="started">Avviato:</string>
+    <string name="started">Avviato %1$s</string>
     <string name="stopped">Fermato:</string>
     <string name="summary_hide_volt">Non registrare e non mostrare la tensione della batteria</string>
     <string name="pref_title_hide_volt">Nascondi tensione</string>
