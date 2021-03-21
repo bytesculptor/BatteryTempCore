@@ -47,6 +47,14 @@ public class Constants {
     public static final int DEFAULT_LOW_TEMP_WARNING_FAHRENHEIT = 60;
     public static final int DEFAULT_HIGH_TEMP_WARNING_FAHRENHEIT = 95;
 
+    public static final int LOWER_LIMIT_TEMP_GOOD = 120;    // deka degree!
+    public static final int UPPER_LIMIT_TEMP_GOOD = 370;    // deka degree!
+    public static final int LOWER_LIMIT_TEMP_WARNING = 80;  // deka degree!
+    public static final int UPPER_LIMIT_TEMP_WARNING = 420; // deka degree!
+
+    public static final int LOWER_LIMIT_LEVEL_GOOD = 35;
+    public static final int LOWER_LIMIT_LEVEL_WARNING = 20;
+
     public static final String PREF_tempNotificationLowCelsius = "tempNotificationLowCelsius";
     public static final String PREF_tempNotificationHighCelsius = "tempNotificationHighCelsius";
     public static final String PREF_tempNotificationLowFahrenheit = "tempNotificationLowFahrenheit";

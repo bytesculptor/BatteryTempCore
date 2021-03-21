@@ -66,35 +66,33 @@ object BamowiHelperLibrary {
     }
 
     @JvmStatic
-    fun getHealthIcon(context: Context?, health: Int): String {
-        var returnString = ""
+    fun getHealthIcon(context: Context?, health: Int): Int {
         when (health) {
             BatteryManager.BATTERY_HEALTH_UNKNOWN -> {
-                // ivHealth!!.setImageResource(R.drawable.bad)
+                return R.drawable.condition_bad_red
             }
             BatteryManager.BATTERY_HEALTH_GOOD -> {
-                //  ivHealth!!.setImageResource(R.drawable.good)
+                return R.drawable.condition_good
             }
             BatteryManager.BATTERY_HEALTH_OVERHEAT -> {
-                //  ivHealth!!.setImageResource(R.drawable.bad)
+                return R.drawable.condition_bad_red
             }
             BatteryManager.BATTERY_HEALTH_DEAD -> {
-                //   ivHealth!!.setImageResource(R.drawable.bad)
+                return R.drawable.condition_bad_red
             }
             BatteryManager.BATTERY_HEALTH_OVER_VOLTAGE -> {
-                //  ivHealth!!.setImageResource(R.drawable.bad)
+                return R.drawable.condition_bad_red
             }
             BatteryManager.BATTERY_HEALTH_UNSPECIFIED_FAILURE -> {
-                //ivHealth!!.setImageResource(R.drawable.bad)
+                return R.drawable.condition_bad_red
             }
             BatteryManager.BATTERY_HEALTH_COLD -> {
-                //  ivHealth!!.setImageResource(R.drawable.bad)
+                return R.drawable.condition_bad_blue
             }
             else -> {
-                //  ivHealth!!.setImageResource(R.drawable.bad)
+                return R.drawable.condition_bad_red
             }
         }
-        return returnString
     }
 
     @JvmStatic
@@ -103,28 +101,32 @@ object BamowiHelperLibrary {
 
         // charging
         if (data!!.lLastChargingStart > data.lLastChargingStop && data.lLastChargingStart != 0L) {
-            returnString = context?.getString(R.string.started) + " " + ConversionHelpers.getTimestampAsTimeString(data.lLastChargingStart)
+            val time = getHourMinStringFromMillis(System.currentTimeMillis() - data.lLastChargingStart)
+            returnString += context!!.getString(R.string.started_ago, time)
 
             // not charging
         } else if (data.lLastChargingStart < data.lLastChargingStop) {
-            returnString = context?.getString(R.string.stopped) + " "
+            val timeString = ConversionHelpers.getTimestampAsTimeString(data.lLastChargingStop)
 
             // today
             if (DateUtils.isToday(data.lLastChargingStop)) {
-                returnString += context?.getString(R.string.szToday) + " "
+                returnString += context?.getString(R.string.stopped_today, timeString)
 
                 // yesterday
             } else if (DateUtils.isToday((data.lLastChargingStop) + 24 * 3600000)) {
-                returnString += context?.getString(R.string.szYesterday) + " "
+                returnString += context?.getString(R.string.stopped_yesterday, timeString)
+            }
 
-                // otherwise date
-            } else {
+            // this week
+            else if (DateUtils.isToday((data.lLastChargingStop) + 24 * 6 * 3600000)) {
+                returnString += context?.getString(R.string.stopped_day, ConversionHelpers.getWeekdayString(context, data.lLastChargingStop), timeString)
+            }
+            // otherwise date
+            else {
                 val flags = DateUtils.FORMAT_SHOW_DATE or DateUtils.FORMAT_NO_YEAR
                 returnString += DateUtils.formatDateTime(context, data.lLastChargingStop, flags) + " "
             }
 
-            // and add time
-            returnString += ConversionHelpers.getTimestampAsTimeString(data.lLastChargingStop)
 
             // Charged ..min from ..% to ..%
             returnString += (context?.getString(R.string.szCharged) + " "
@@ -147,12 +149,13 @@ object BamowiHelperLibrary {
     }
 
     private fun getHourMinStringFromMillis(diff: Long): String {
-        val min = diff / 1000 / 60
+        var min = diff / 1000 / 60
         if (min > 60) {
             val hour = min.toInt() / 60
             val leftMin = min.toInt() % 60
             return hour.toString() + "h " + leftMin + "min"
         }
+        if (min == 0L) min = 1
         return min.toString() + "min"
     }
 

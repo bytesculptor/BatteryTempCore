@@ -10,6 +10,8 @@
  */
 package com.bytesculptor.batterytempcore.utilities
 
+import android.content.Context
+import com.bytesculptor.batterytempcore.R
 import java.text.DateFormat
 import java.util.*
 
@@ -58,6 +60,19 @@ object ConversionHelpers {
             cal[Calendar.DAY_OF_WEEK]
         } catch (e: Exception) {
             0
+        }
+    }
+
+    fun getWeekdayString(context: Context, timestamp: Long): String {
+        return when (ConversionHelpers.getWeekDay(timestamp)) {
+            1 -> context.getString(R.string.Mon)
+            2 -> context.getString(R.string.Tue)
+            3 -> context.getString(R.string.Wed)
+            4 -> context.getString(R.string.Thu)
+            5 -> context.getString(R.string.Fri)
+            6 -> context.getString(R.string.Sat)
+            7 -> context.getString(R.string.Sun)
+            else -> "---"
         }
     }
 }
