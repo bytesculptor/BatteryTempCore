@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 - 2021  Byte Sculptor Software  - All Rights Reserved
+ * Copyright (c)  2021  Byte Sculptor Software  - All Rights Reserved
  *
  * All information contained herein is and remains the property of Byte Sculptor Software.
  * Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
@@ -139,6 +139,7 @@ public class Constants {
     public static final String START_LEVEL = "startLevel";
     public static final String STOP_LEVEL = "stopLevel";
     public static final String CHARGE_SPEED = "chargeSpeed";
+    public static final String CHARGE_AMOUNT = "chargeAmount";
     public static final String TEMP = "temperature";
     public static final String VOLT = "voltage";
     public static final String DATETIME = "dateTime";

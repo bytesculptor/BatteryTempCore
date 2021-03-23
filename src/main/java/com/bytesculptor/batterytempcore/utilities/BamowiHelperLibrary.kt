@@ -15,7 +15,7 @@ import android.content.Context
 import android.os.BatteryManager
 import android.text.format.DateUtils
 import com.bytesculptor.batterytempcore.R
-import com.bytesculptor.batterytempcore.model.ChargingSummary
+import com.bytesculptor.batterytempcore.model.ChargingEntity
 import com.bytesculptor.batterytempcore.model.HomeViewActualValues
 
 object BamowiHelperLibrary {
@@ -96,47 +96,47 @@ object BamowiHelperLibrary {
     }
 
     @JvmStatic
-    fun getChargingSummary(context: Context?, data: ChargingSummary?): String {
+    fun getChargingSummary(context: Context?, data: ChargingEntity?): String {
         var returnString = ""
 
         // charging
-        if (data!!.lLastChargingStart > data.lLastChargingStop && data.lLastChargingStart != 0L) {
-            val time = getHourMinStringFromMillis(System.currentTimeMillis() - data.lLastChargingStart)
+        if (data!!.startTimestamp > data.stopTimestamp && data.startLevel != 0) {
+            val time = getHourMinStringFromMillis(System.currentTimeMillis() - data.startTimestamp)
             returnString += context!!.getString(R.string.started_ago, time)
 
             // not charging
-        } else if (data.lLastChargingStart < data.lLastChargingStop) {
-            val timeString = ConversionHelpers.getTimestampAsTimeString(data.lLastChargingStop)
+        } else if (data.startTimestamp < data.stopTimestamp) {
+            val timeString = ConversionHelpers.getTimestampAsTimeString(data.stopTimestamp)
 
             // today
-            if (DateUtils.isToday(data.lLastChargingStop)) {
+            if (DateUtils.isToday(data.stopTimestamp)) {
                 returnString += context?.getString(R.string.stopped_today, timeString)
 
                 // yesterday
-            } else if (DateUtils.isToday((data.lLastChargingStop) + 24 * 3600000)) {
+            } else if (DateUtils.isToday((data.stopTimestamp) + 24 * 3600000)) {
                 returnString += context?.getString(R.string.stopped_yesterday, timeString)
             }
 
             // this week
-            else if (DateUtils.isToday((data.lLastChargingStop) + 24 * 6 * 3600000)) {
-                returnString += context?.getString(R.string.stopped_day, ConversionHelpers.getWeekdayString(context, data.lLastChargingStop), timeString)
+            else if (DateUtils.isToday((data.stopTimestamp) + 24 * 6 * 3600000)) {
+                returnString += context?.getString(R.string.stopped_day, ConversionHelpers.getWeekdayString(context, data.stopTimestamp), timeString)
             }
             // otherwise date
             else {
                 val flags = DateUtils.FORMAT_SHOW_DATE or DateUtils.FORMAT_NO_YEAR
-                returnString += DateUtils.formatDateTime(context, data.lLastChargingStop, flags) + " "
+                returnString += DateUtils.formatDateTime(context, data.stopTimestamp, flags) + " "
             }
 
 
             // Charged ..min from ..% to ..%
             returnString += (context?.getString(R.string.szCharged) + " "
-                    + getHourMinStringFromMillis(data.lLastChargingStop - data.lLastChargingStart) + " - "
-                    + context?.getString(R.string.szFrom) + " " + data.lBatStartLevel + "% "
-                    + context?.getString(R.string.szTo) + " " + data.lBatStopLevel + "%")
+                    + getHourMinStringFromMillis(data.stopTimestamp - data.startTimestamp) + " - "
+                    + context?.getString(R.string.szFrom) + " " + data.startLevel + "% "
+                    + context?.getString(R.string.szTo) + " " + data.stopLevel + "%")
 
-            val minutes: Long = getMinutesFromMillis(data.lLastChargingStop - data.lLastChargingStart)
-            if (minutes > 0 && (data.lBatStopLevel - data.lBatStartLevel) > 0) { // TODO 5 to 0 temporary
-                val averagePerHour = (data.lBatStopLevel - data.lBatStartLevel).toFloat() / (minutes.toFloat() / 60.0f)
+            val minutes: Long = getMinutesFromMillis(data.stopTimestamp - data.startTimestamp)
+            if (minutes > 0 && (data.stopLevel - data.startLevel) > 0) { // TODO 5 to 0 temporary
+                val averagePerHour = (data.stopLevel - data.startLevel).toFloat() / (minutes.toFloat() / 60.0f)
                 returnString += ("\n" + context?.getString(R.string.avg) + " " + averagePerHour.toInt() + "%/h")
             }
 /*
@@ -161,6 +161,12 @@ object BamowiHelperLibrary {
 
     private fun getMinutesFromMillis(diff: Long): Long {
         return diff / 1000 / 60
+    }
+
+    @JvmStatic
+    fun calculateChargingSpeed(data: ChargingEntity): Float {
+
+        return 0.0f
     }
 
 }

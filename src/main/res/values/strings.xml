@@ -1,5 +1,5 @@
 <!--
-  ~ Copyright (c) 2017 - 2021  Byte Sculptor Software  - All Rights Reserved
+  ~ Copyright (c)  2021  Byte Sculptor Software  - All Rights Reserved
   ~
   ~ All information contained herein is and remains the property of Byte Sculptor Software.
   ~ Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
@@ -11,12 +11,12 @@
 
 <resources>
 
-    <string name="szBatUnknown">unknown</string>
-    <string name="szBatOverheat">overheat</string>
-    <string name="szBatDead">dead</string>
-    <string name="szBatUnspec">unspecified failure</string>
-    <string name="szBatCold">cold</string>
-    <string name="szBatOvervoltage">over voltage</string>
+    <string name="szBatUnknown">Unknown</string>
+    <string name="szBatOverheat">Overheat</string>
+    <string name="szBatDead">Dead</string>
+    <string name="szBatUnspec">Unspecified failure</string>
+    <string name="szBatCold">Cold</string>
+    <string name="szBatOvervoltage">Over voltage</string>
     <string name="szPlugAC" translatable="false">AC</string>
     <string name="szPlugUSB" translatable="false">USB</string>
     <string name="szPlugWireless" translatable="false">wireless</string>
