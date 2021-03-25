@@ -140,6 +140,7 @@ public class Constants {
     public static final String STOP_LEVEL = "stopLevel";
     public static final String CHARGE_SPEED = "chargeSpeed";
     public static final String CHARGE_AMOUNT = "chargeAmount";
+    public static final String CHARGER_TYPE = "chargerType";
     public static final String TEMP = "temperature";
     public static final String VOLT = "voltage";
     public static final String DATETIME = "dateTime";

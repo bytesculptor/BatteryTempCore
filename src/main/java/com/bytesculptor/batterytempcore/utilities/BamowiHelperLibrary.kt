@@ -164,9 +164,10 @@ object BamowiHelperLibrary {
     }
 
     @JvmStatic
-    fun calculateChargingSpeed(data: ChargingEntity): Float {
-
-        return 0.0f
+    fun calculateChargingSpeed(data: ChargingEntity): Int {
+        var time: Float = (data.stopTimestamp - data.startTimestamp).toFloat() / (3600 * 1000.0f)
+        var speed = (data.chargeAmount / time) * 10 + 1
+        return speed.toInt() / 10
     }
 
 }

@@ -20,25 +20,25 @@ import com.bytesculptor.batterytempcore.utilities.Constants
 @Entity(tableName = Constants.TABLE_NAME_CHARGING)
 class ChargingEntity {
 
-    constructor(id: Int, startTimestamp: Long, startLevel: Int, stopTimestamp: Long, stopLevel: Int, chargeAmount: Int, healthEvent: Int, chargeSpeed: Float) {
+    constructor(id: Int, startTimestamp: Long, startLevel: Int, stopTimestamp: Long, stopLevel: Int, chargeAmount: Int, chargerType: Int, chargeSpeed: Int) {
         this.id = id
         this.startTimestamp = startTimestamp
         this.startLevel = startLevel
         this.stopTimestamp = stopTimestamp
         this.stopLevel = stopLevel
         this.chargeAmount = chargeAmount
-        this.healthEvent = healthEvent
+        this.chargerType = chargerType
         this.chargeSpeed = chargeSpeed
     }
 
     @Ignore
-    constructor(startTimestamp: Long, startLevel: Int, stopTimestamp: Long, stopLevel: Int, chargeAmount: Int, healthEvent: Int, chargeSpeed: Float) {
+    constructor(startTimestamp: Long, startLevel: Int, stopTimestamp: Long, stopLevel: Int, chargeAmount: Int, chargerType: Int, chargeSpeed: Int) {
         this.startTimestamp = startTimestamp
         this.startLevel = startLevel
         this.stopTimestamp = stopTimestamp
         this.stopLevel = stopLevel
         this.chargeAmount = chargeAmount
-        this.healthEvent = healthEvent
+        this.chargerType = chargerType
         this.chargeSpeed = chargeSpeed
     }
 
@@ -61,9 +61,9 @@ class ChargingEntity {
     @ColumnInfo(name = Constants.CHARGE_AMOUNT)
     var chargeAmount = 0
 
-    @ColumnInfo(name = Constants.HEALTH_EVENT_TYPE)
-    var healthEvent = 0
+    @ColumnInfo(name = Constants.CHARGER_TYPE)
+    var chargerType = 0
 
     @ColumnInfo(name = Constants.CHARGE_SPEED)
-    var chargeSpeed = 0.0f
+    var chargeSpeed = 0
 }
