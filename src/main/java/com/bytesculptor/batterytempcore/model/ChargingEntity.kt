@@ -16,8 +16,9 @@ import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.bytesculptor.batterytempcore.utilities.Constants
+import com.bytesculptor.batterytempcore.utilities.Constants.*
 
-@Entity(tableName = Constants.TABLE_NAME_CHARGING)
+@Entity(tableName = TABLE_NAME_CHARGING)
 class ChargingEntity {
 
     constructor(id: Int, startTimestamp: Long, startLevel: Int, stopTimestamp: Long, stopLevel: Int, chargeAmount: Int, chargerType: Int, chargeSpeed: Int) {
@@ -46,24 +47,24 @@ class ChargingEntity {
     @ColumnInfo(name = Constants._ID)
     var id = 0
 
-    @ColumnInfo(name = Constants.START_TIMESTAMP)
+    @ColumnInfo(name = START_TIMESTAMP)
     var startTimestamp: Long = 0L
 
-    @ColumnInfo(name = Constants.START_LEVEL)
+    @ColumnInfo(name = START_LEVEL)
     var startLevel = 0
 
-    @ColumnInfo(name = Constants.STOP_TIMESTAMP)
+    @ColumnInfo(name = STOP_TIMESTAMP)
     var stopTimestamp: Long = 0L
 
-    @ColumnInfo(name = Constants.STOP_LEVEL)
+    @ColumnInfo(name = STOP_LEVEL)
     var stopLevel = 0
 
-    @ColumnInfo(name = Constants.CHARGE_AMOUNT)
+    @ColumnInfo(name = CHARGE_AMOUNT)
     var chargeAmount = 0
 
-    @ColumnInfo(name = Constants.CHARGER_TYPE)
+    @ColumnInfo(name = CHARGER_TYPE)
     var chargerType = 0
 
-    @ColumnInfo(name = Constants.CHARGE_SPEED)
+    @ColumnInfo(name = CHARGE_SPEED)
     var chargeSpeed = 0
 }
