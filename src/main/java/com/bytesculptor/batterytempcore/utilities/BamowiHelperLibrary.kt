@@ -14,6 +14,7 @@ package com.bytesculptor.batterytempcore.utilities
 import android.content.Context
 import android.os.BatteryManager
 import android.text.format.DateUtils
+import android.util.Log
 import com.bytesculptor.batterytempcore.R
 import com.bytesculptor.batterytempcore.model.ChargingEntity
 import com.bytesculptor.batterytempcore.model.HomeViewActualValues
@@ -21,7 +22,7 @@ import com.bytesculptor.batterytempcore.model.HomeViewActualValues
 object BamowiHelperLibrary {
 
     @JvmStatic
-    fun getChargingType(context: Context?, data: HomeViewActualValues): String {
+    fun getChargerType(context: Context?, data: HomeViewActualValues): String {
         var plugType = ""
         when (data.plug) {
             0 -> plugType = "---"
@@ -98,6 +99,7 @@ object BamowiHelperLibrary {
     @JvmStatic
     fun getChargingSummary(context: Context?, data: ChargingEntity?): String {
         var returnString = ""
+        Log.d("TEST", "getChargingSummary: " + data!!.startTimestamp + "-" + data.stopTimestamp + "-" + data.startLevel)
 
         // charging
         if (data!!.startTimestamp > data.stopTimestamp && data.startLevel != 0) {
@@ -165,9 +167,13 @@ object BamowiHelperLibrary {
 
     @JvmStatic
     fun calculateChargingSpeed(data: ChargingEntity): Int {
-        var time: Float = (data.stopTimestamp - data.startTimestamp).toFloat() / (3600 * 1000.0f)
-        var speed = (data.chargeAmount / time) * 10 + 1
-        return speed.toInt() / 10
+        val minutes: Long = getMinutesFromMillis(data.stopTimestamp - data.startTimestamp)
+        val averagePerHour = (data.stopLevel - data.startLevel).toFloat() / (minutes.toFloat() / 60.0f)
+        // val timeInSec = (data.stopTimestamp - data.startTimestamp) / 1000
+        //  val timeInHours = timeInSec / (3600.0f)
+        //  var speed = (data.chargeAmount / timeInHours) * 10 + 1  // in %/h
+        //   return speed.toInt() / 10
+        return averagePerHour.toInt()
     }
 
 }
