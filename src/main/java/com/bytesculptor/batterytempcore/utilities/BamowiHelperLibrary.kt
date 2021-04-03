@@ -22,9 +22,9 @@ import com.bytesculptor.batterytempcore.model.HomeViewActualValues
 object BamowiHelperLibrary {
 
     @JvmStatic
-    fun getChargerType(context: Context?, data: HomeViewActualValues): String {
+    fun getChargerType(context: Context?, plug: Int): String {
         var plugType = ""
-        when (data.plug) {
+        when (plug) {
             0 -> plugType = "---"
             BatteryManager.BATTERY_PLUGGED_AC -> plugType = context?.getString(R.string.szPlugAC).toString()
             BatteryManager.BATTERY_PLUGGED_USB -> plugType = context?.getString(R.string.szPlugUSB).toString()
@@ -67,7 +67,7 @@ object BamowiHelperLibrary {
     }
 
     @JvmStatic
-    fun getHealthIcon(context: Context?, health: Int): Int {
+    fun getHealthIcon(health: Int): Int {
         when (health) {
             BatteryManager.BATTERY_HEALTH_UNKNOWN -> {
                 return R.drawable.condition_bad_red
