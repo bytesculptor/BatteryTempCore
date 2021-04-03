@@ -1,5 +1,5 @@
 /*
- * Copyright (c)  2021  Byte Sculptor Software  - All Rights Reserved
+ * Copyright (c)  2021 Byte Sculptor Software - All Rights Reserved
  *
  * All information contained herein is and remains the property of Byte Sculptor Software.
  * Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
@@ -17,7 +17,6 @@ import android.text.format.DateUtils
 import android.util.Log
 import com.bytesculptor.batterytempcore.R
 import com.bytesculptor.batterytempcore.model.ChargingEntity
-import com.bytesculptor.batterytempcore.model.HomeViewActualValues
 
 object BamowiHelperLibrary {
 
@@ -129,7 +128,6 @@ object BamowiHelperLibrary {
                 returnString += DateUtils.formatDateTime(context, data.stopTimestamp, flags) + " "
             }
 
-
             // Charged ..min from ..% to ..%
             returnString += (context?.getString(R.string.szCharged) + " "
                     + getHourMinStringFromMillis(data.stopTimestamp - data.startTimestamp) + " - "
@@ -137,10 +135,10 @@ object BamowiHelperLibrary {
                     + context?.getString(R.string.szTo) + " " + data.stopLevel + "%")
 
             val minutes: Long = getMinutesFromMillis(data.stopTimestamp - data.startTimestamp)
-            if (minutes > 0 && (data.stopLevel - data.startLevel) > 0) { // TODO 5 to 0 temporary
-                val averagePerHour = (data.stopLevel - data.startLevel).toFloat() / (minutes.toFloat() / 60.0f)
-                returnString += ("\n" + context?.getString(R.string.avg) + " " + averagePerHour.toInt() + "%/h")
-            }
+            // if (minutes > 0 && (data.stopLevel - data.startLevel) > 0) { // TODO 5 to 0 temporary
+            val averagePerHour = (data.stopLevel - data.startLevel).toFloat() / (minutes.toFloat() / 60.0f)
+            returnString += ("  (" + averagePerHour.toInt() + "%/h)")
+            //  }
 /*
              if (data.lLastChargingFull > 0 && data.lLastChargingStop < 95) {
                  str = str + ("\n " + context?.getString(R.string.szFull) + " >=95%: " + LocalLibrary.getTimestampAsDateString(data.lLastChargingFull))
@@ -167,13 +165,10 @@ object BamowiHelperLibrary {
 
     @JvmStatic
     fun calculateChargingSpeed(data: ChargingEntity): Int {
-        val minutes: Long = getMinutesFromMillis(data.stopTimestamp - data.startTimestamp)
-        val averagePerHour = (data.stopLevel - data.startLevel).toFloat() / (minutes.toFloat() / 60.0f)
-        // val timeInSec = (data.stopTimestamp - data.startTimestamp) / 1000
-        //  val timeInHours = timeInSec / (3600.0f)
-        //  var speed = (data.chargeAmount / timeInHours) * 10 + 1  // in %/h
-        //   return speed.toInt() / 10
-        return averagePerHour.toInt()
+        val timeInSec = (data.stopTimestamp - data.startTimestamp) / 1000
+        val timeInHours = timeInSec / (3600.0f)
+        val speed = (data.chargeAmount / timeInHours) * 10 + 1 // rounding
+        return speed.toInt() / 10 // in %/h
     }
 
 }
