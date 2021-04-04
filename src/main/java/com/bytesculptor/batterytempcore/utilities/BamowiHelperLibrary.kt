@@ -135,10 +135,10 @@ object BamowiHelperLibrary {
                     + context?.getString(R.string.szTo) + " " + data.stopLevel + "%")
 
             val minutes: Long = getMinutesFromMillis(data.stopTimestamp - data.startTimestamp)
-            // if (minutes > 0 && (data.stopLevel - data.startLevel) > 0) { // TODO 5 to 0 temporary
-            val averagePerHour = (data.stopLevel - data.startLevel).toFloat() / (minutes.toFloat() / 60.0f)
-            returnString += ("  (" + averagePerHour.toInt() + "%/h)")
-            //  }
+            if (minutes > 4 && (data.stopLevel - data.startLevel) > 2) {
+                val averagePerHour = (data.stopLevel - data.startLevel).toFloat() / (minutes.toFloat() / 60.0f)
+                returnString += ("  (" + averagePerHour.toInt() + "%/h)")
+            }
 /*
              if (data.lLastChargingFull > 0 && data.lLastChargingStop < 95) {
                  str = str + ("\n " + context?.getString(R.string.szFull) + " >=95%: " + LocalLibrary.getTimestampAsDateString(data.lLastChargingFull))
