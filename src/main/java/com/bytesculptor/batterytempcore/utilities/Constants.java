@@ -1,5 +1,5 @@
 /*
- * Copyright (c)  2021  Byte Sculptor Software  - All Rights Reserved
+ * Copyright (c)  2021 Byte Sculptor Software - All Rights Reserved
  *
  * All information contained herein is and remains the property of Byte Sculptor Software.
  * Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
@@ -14,8 +14,8 @@ package com.bytesculptor.batterytempcore.utilities;
 public class Constants {
 
     public static final String KEY_PREF_NOTIFY = "notify_switch";
-    public static final String KEY_PREF_FAHRENHEIT_SWITCH = "fahrenheit_switch";
-    public static final String KEY_PREF_LOG_DURATION = "log_duration";
+    public static final String KEY_PREF_TEMP_UNIT = "KEY_PREF_TEMP_UNIT";
+    public static final String KEY_PREF_LOG_DURATION = "KEY_PREF_LOG_DURATION";
     public static final String KEY_PREF_HIDE_VOLTAGE = "KEY_PREF_HIDE_VOLTAGE";
     public static final String KEY_PREF_DAY_LINES = "day_line_switch";
     public static final String KEY_PREF_NOTIF_SETTINGS_WARNING = "KEY_PREF_NOTIF_SETTINGS_WARNING";
@@ -68,7 +68,10 @@ public class Constants {
     public static final int THEME_DARK = 1;
     public static final int THEME_SYSTEM = 2;
 
-    public static final String PREF_darkMode = "KEY_PREF_DARK_MODE_2";
+    public static final int UNIT_CELSIUS = 0;
+    public static final int UNIT_FAHRENHEIT = 1;
+
+    public static final String KEY_PREF_DARK_MODE = "KEY_PREF_DARK_MODE";
 
 
     // logging

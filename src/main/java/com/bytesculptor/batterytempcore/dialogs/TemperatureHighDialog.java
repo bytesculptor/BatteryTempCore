@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 - 2021  Byte Sculptor Software  - All Rights Reserved
+ * Copyright (c)  2021 Byte Sculptor Software - All Rights Reserved
  *
  * All information contained herein is and remains the property of Byte Sculptor Software.
  * Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
@@ -29,7 +29,8 @@ import com.bytesculptor.batterytempcore.utilities.Constants;
 import com.bytesculptor.batterytempcore.utilities.ConversionHelpers;
 import com.shawnlin.numberpicker.NumberPicker;
 
-import static com.bytesculptor.batterytempcore.utilities.Constants.KEY_PREF_FAHRENHEIT_SWITCH;
+import static com.bytesculptor.batterytempcore.utilities.Constants.KEY_PREF_TEMP_UNIT;
+import static com.bytesculptor.batterytempcore.utilities.Constants.UNIT_FAHRENHEIT;
 
 public class TemperatureHighDialog extends DialogFragment {
     String TAG = TemperatureHighDialog.class.getSimpleName();
@@ -54,16 +55,16 @@ public class TemperatureHighDialog extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dialog_number_picker, container, false);
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        boolean bFahrenheit = settings.getBoolean(KEY_PREF_FAHRENHEIT_SWITCH, false);
+        int tempUnit = Integer.parseInt(settings.getString(KEY_PREF_TEMP_UNIT, "0"));
 
         TextView header = view.findViewById(R.id.tvHeaderTemp);
         TextView unit = view.findViewById(R.id.tvDegreeUnit);
-        String temperatureUnit = bFahrenheit ? "°F" : "°C";
+        String temperatureUnit = tempUnit == UNIT_FAHRENHEIT ? "°F" : "°C";
         header.setText(R.string.pref_title_max_temp_notification);
         unit.setText(temperatureUnit);
         NumberPicker numberPicker = view.findViewById(R.id.number_picker);
 
-        if (bFahrenheit) {
+        if (tempUnit == UNIT_FAHRENHEIT) {
             numberPicker.setMinValue(Constants.HIGH_TEMP_WARNING_FAHRENHEIT_MIN);
             numberPicker.setMaxValue(Constants.HIGH_TEMP_WARNING_FAHRENHEIT_MAX);
             int maxLimit = settings.getInt(Constants.PREF_tempNotificationHighFahrenheit, Constants.DEFAULT_HIGH_TEMP_WARNING_FAHRENHEIT);
@@ -84,7 +85,7 @@ public class TemperatureHighDialog extends DialogFragment {
         btSave.setOnClickListener(save -> {
             SharedPreferences.Editor editor = settings.edit();
             int returnValue = numberPicker.getValue();
-            if (bFahrenheit) {
+            if (tempUnit == UNIT_FAHRENHEIT) {
                 editor.putInt(Constants.PREF_tempNotificationHighFahrenheit, returnValue);
                 editor.putInt(Constants.PREF_tempNotificationHighCelsius, (int) ConversionHelpers.convertToCelsius(returnValue));
             } else {
